@@ -13,6 +13,6 @@ export default {
     output: {
         compact: true,
         file: 'dist/module.min.js',
-        format: 'esm',
+        format: 'cjs',
     },
 }
