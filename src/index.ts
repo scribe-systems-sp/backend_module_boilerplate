@@ -1,4 +1,6 @@
 import { Module } from './model'
+import { Sequelize } from 'sequelize';
+import { Router } from 'express'
 
 class BaseModule extends Module {
     get name(): string {
@@ -20,6 +22,14 @@ class BaseModule extends Module {
         // must not have spaces and special characters. only numbers, letters and '_' character
         // organization name 'native' is reserved
         return '/test_org/base_module'
+    }
+    initDatabase(db: Sequelize) {
+        console.log(`Hello world from init database on module [${this.name}]!!`)
+        return Promise.resolve()
+    }
+    initRouter(router: Router) {
+        console.log(`Hello world from init router on module [${this.name}]!!`)
+        return Promise.resolve()
     }
 }
 
