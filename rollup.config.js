@@ -4,6 +4,8 @@ export default {
     input: 'src/index.ts',
     external: [
         'express',
+        'express-async-handler',
+        'express-validator',
         'sequelize',
         'axios'
     ],
